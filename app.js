@@ -3,25 +3,22 @@ let elementoLista = document.querySelector("#listaAmigos");
 let resultado = document.querySelector("#resultado");
 
 function agregarAmigo() {
-
   let inputNombre = document.getElementById("amigo").value;
 
-
   if (inputNombre.length > 0) {
-    listaNombres.push(inputNombre); 
+    listaNombres.push(inputNombre);
   } else {
-    alert("ingrese un nombre"); 
+    alert("ingrese un nombre");
   }
-  limpiarCaja(); 
+  limpiarCaja();
 
   crearListaAmigos();
 }
 
-
 function crearListaAmigos() {
-
   resultado.innerHTML = "";
   elementoLista.innerHTML = "";
+
   for (let i = 0; listaNombres.length > i; i++) {
     elementoLista.innerHTML += `<li>${listaNombres[i]}</li>`;
   }
@@ -37,7 +34,6 @@ function sortearAmigo() {
     alert("Debe agregar al menos 2 nombres para poder sortear");
   }
 }
-
 
 function limpiarCaja() {
   let valorCaja = document.querySelector("#amigo");
